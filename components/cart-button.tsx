@@ -22,6 +22,7 @@ export const CartButton = ({ handleCartOpen }: CartButtonProps) => {
         alignItems: "center",
         justifyContent: "center",
         gap: "0.5rem",
+        cursor: "pointer",
         flexShrink: 0,
         color: {
           md: "primary.main",
@@ -74,6 +75,7 @@ export const WishlistButton = ({ handleCartOpen }: CartButtonProps) => {
         },
         alignItems: "center",
         justifyContent: "center",
+        cursor: "pointer",
         gap: "0.5rem",
         flexShrink: 0,
         color: {
