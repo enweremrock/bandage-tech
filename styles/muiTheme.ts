@@ -23,40 +23,40 @@ export const brandTheme = createTheme({
   },
   typography: {
     htmlFontSize: 10,
-    fontFamily: "Montserrat",
+    fontFamily: "var(--font-montserrat)",
     fontWeightRegular: 400,
     fontWeightBold: 700,
     fontWeightMedium: 500,
     h1: {
-      fontFamily: "Montserrat",
+      fontFamily: "var(--font-montserrat)",
     },
     h2: {
       fontSize: "4rem",
       lineHeight: "125%",
       fontWeight: 700,
       letterSpacing: "0.2px",
-      fontFamily: "Montserrat",
+      fontFamily: "var(--font-montserrat)",
     },
     h3: {
       fontSize: "2.4rem",
       lineHeight: "133.333%",
       fontWeight: 700,
       letterSpacing: "0.1px",
-      fontFamily: "Montserrat",
+      fontFamily: "var(--font-montserrat)",
     },
     h4: {
       fontSize: "2rem",
       lineHeight: "150%",
       fontWeight: 400,
       letterSpacing: "0.2px",
-      fontFamily: "Montserrat",
+      fontFamily: "var(--font-montserrat)",
     },
     h5: {
       fontSize: "1.6rem",
       lineHeight: "150%",
       fontWeight: 700,
       letterSpacing: "0.1px",
-      fontFamily: "Montserrat",
+      fontFamily: "var(--font-montserrat)",
     },
 
     h6: {
@@ -64,77 +64,77 @@ export const brandTheme = createTheme({
       lineHeight: "171.429%",
       fontWeight: 700,
       letterSpacing: "0.2px",
-      fontFamily: "Montserrat",
+      fontFamily: "var(--font-montserrat)",
     },
     body1: {
       fontSize: "1.4rem",
       lineHeight: "142.857%",
       fontWeight: 400,
       letterSpacing: "0.2px",
-      fontFamily: "Montserrat",
+      fontFamily: "var(--font-montserrat)",
     },
     body2: {
       fontSize: "1.4rem",
       lineHeight: "171.429%",
       fontWeight: 700,
       letterSpacing: "0.2px",
-      fontFamily: "Montserrat",
+      fontFamily: "var(--font-montserrat)",
     },
     subtitle1: {
       fontSize: "3rem",
       fontWeight: 400,
       lineHeight: "150%",
       letterSpacing: " 0.2px",
-      fontFamily: "Montserrat",
+      fontFamily: "var(--font-montserrat)",
     },
     subtitle2: {
       fontSize: "1.2rem",
       lineHeight: "133.333%",
       fontWeight: 400,
       letterSpacing: "0.2px",
-      fontFamily: "Montserrat",
+      fontFamily: "var(--font-montserrat)",
     },
   },
-  components: {
-    MuiCssBaseline: {
-      styleOverrides: `
-        @font-face {
-            font-family: 'Montserrat';
-            font-style: normal;
-            font-display: swap;
-            font-weight: 400;
-            src:url(/asset/fonts/montserrat-regular.woff2) format(woff2)
-          }
+  // components: {
+  //   MuiCssBaseline: {
+  //     styleOverrides: `
+  //       @font-face {
+  //           font-family: 'Montserrat';
+  //           font-style: normal;
+  //           font-display: swap;
+  //           font-weight: 400;
+  //           src:url(/asset/fonts/montserrat-regular.woff2) format(woff2)
+  //         }
 
-          @font-face {
-            font-family: 'Montserrat';
-            font-style: normal;
-            font-display: swap;
-            font-weight: 500;
-            src:url(/asset/fonts/montserrat-medium.woff2)
-          }
-          @font-face {
-            font-family: 'Montserrat';
-            font-style: normal;
-            font-display: swap;
-            font-weight: 600;
-            src:url(/asset/fonts/montserrat-semiBold.woff2)
-          }
-          @font-face {
-            font-family: 'Montserrat';
-            font-style: normal;
-            font-display: swap;
-            font-weight: 700;
-            src:url(/asset/fonts/montserrat-bold.woff2)
-          }
-          @font-face {
-            font-family: 'Montserrat';
-            font-style: normal;
-            font-display: swap;
-            font-weight: 800;
-            src:url(/asset/fonts/montserrat-extraBold.woff2)
-          }
-        `,
-    },
-  },
+  //         @font-face {
+  //           font-family: 'Montserrat';
+  //           font-style: normal;
+  //           font-display: swap;
+  //           font-weight: 500;
+  //           src:url(/asset/fonts/montserrat-medium.woff2)
+  //         }
+  //         @font-face {
+  //           font-family: 'Montserrat';
+  //           font-style: normal;
+  //           font-display: swap;
+  //           font-weight: 600;
+  //           src:url(/asset/fonts/montserrat-semiBold.woff2)
+  //         }
+  //         @font-face {
+  //           font-family: 'Montserrat';
+  //           font-style: normal;
+  //           font-display: swap;
+  //           font-weight: 700;
+  //           src:url(/asset/fonts/montserrat-bold.woff2)
+  //         }
+  //         @font-face {
+  //           font-family: 'Montserrat';
+  //           font-style: normal;
+  //           font-display: swap;
+  //           font-weight: 800;
+  //           src:url(/asset/fonts/montserrat-extraBold.woff2)
+  //         }
+  //       `,
+  //   },
+  // },
 });
