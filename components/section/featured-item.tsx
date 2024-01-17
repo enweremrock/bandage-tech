@@ -279,6 +279,7 @@ export const ProductCard = ({ sx, item }: ProductCardProps) => {
           alt={item.title}
           layout="fill"
           objectFit="cover"
+          placeholder="blur"
         />
       </Box>
       <Box
