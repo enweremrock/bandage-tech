@@ -43,4 +43,4 @@ Explore the various functionalities provided by Bandage to improve your shopping
 
 ## Lighthouse
 
-[Demo](https://pagespeed.web.dev/analysis/https-bandage-tech-vercel-app/54cptr47vj?form_factor=desktop)
+[View](https://pagespeed.web.dev/analysis/https-bandage-tech-vercel-app/54cptr47vj?form_factor=desktop)
