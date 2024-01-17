@@ -63,6 +63,7 @@ export const Jump = () => {
             alt="jump"
             layout="fill"
             objectFit="cover"
+            loading="lazy"
           />
         </Box>
       </Box>

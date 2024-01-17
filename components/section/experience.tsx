@@ -14,8 +14,8 @@ export const Experience = () => {
           xs: "71.2rem",
         },
         backgroundImage: {
-          md: "url(/asset/images/experience.png)",
-          xs: "url(/asset/images/experience-mobile.png)",
+          md: "url(/asset/images/experience.webp)",
+          xs: "url(/asset/images/experience-mobile.webp)",
         },
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",

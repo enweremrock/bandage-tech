@@ -97,6 +97,7 @@ export const Review = () => {
                     alt="review photo"
                     layout="fill"
                     objectFit="cover"
+                    loading="lazy"
                   />
                 </Box>
                 <Box sx={{ display: "flex", gap: "5px" }}>

@@ -123,6 +123,7 @@ export const FeaturePost = () => {
                     alt={item.title}
                     layout="fill"
                     objectFit="cover"
+                    loading="lazy"
                   />
                 </Box>
                 <Box

@@ -280,6 +280,7 @@ export const ProductCard = ({ sx, item }: ProductCardProps) => {
           layout="fill"
           objectFit="cover"
           placeholder="blur"
+          blurDataURL={item.thumbnail}
         />
       </Box>
       <Box
