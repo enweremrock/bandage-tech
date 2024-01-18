@@ -277,6 +277,7 @@ export const ProductCard = ({ sx, item }: ProductCardProps) => {
           }}
           placeholder="blur"
           blurDataURL={item.thumbnail}
+          loading="lazy"
         />
       </Box>
       <Box
