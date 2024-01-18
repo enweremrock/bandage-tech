@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 import { ProductResponse } from "@/types/product";
+import uniqBy from "lodash/uniqBy";
 import { fetchAllProductAsync } from "./thunks";
 
 const initialState: ProductSliceState = {
@@ -20,10 +21,12 @@ export const productSlice = createSlice({
       .addCase(fetchAllProductAsync.fulfilled, (state, action) => {
         state.status = "succeeded";
 
-        state.paginatedProduct.products = [
+        let newProducts = [
           ...state.paginatedProduct.products,
           ...action.payload.products,
         ];
+
+        state.paginatedProduct.products = uniqBy(newProducts, "id");
 
         state.paginatedProduct.total = action.payload.total;
       })

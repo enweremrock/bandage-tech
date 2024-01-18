@@ -28,6 +28,7 @@ type PaginationProps = {
 export const FeaturedItem = ({ showMore = true, page }: FeaturedItemProps) => {
   const dispatch = useDispatch();
   const products = useSelector(productSelector);
+
   const { ref, inView, entry } = useInView({
     threshold: 0.5,
     triggerOnce: true,
@@ -53,20 +54,13 @@ export const FeaturedItem = ({ showMore = true, page }: FeaturedItemProps) => {
         })
       );
     }
-  }, [dispatch, inView, pagination.limit, pagination.skip]);
+  }, [inView, pagination.limit, pagination.skip]);
 
   const handleLoadMore = (page: number) => {
     const nextPage = (page - 1) * pagination.limit;
     setPagination((prev) => ({ ...prev, currentPage: page, skip: nextPage }));
   };
 
-  const showNextPage = () => {
-    const numberOfPages = Math.ceil(
-      products?.paginatedProduct?.total / pagination.limit
-    );
-
-    // setPagination(prev => ({ ...prev, skip: }))
-  };
   const isProduct = page === "product";
 
   return (
@@ -278,7 +272,9 @@ export const ProductCard = ({ sx, item }: ProductCardProps) => {
           src={item.thumbnail}
           alt={item.title}
           layout="fill"
-          objectFit="cover"
+          style={{
+            objectFit: "cover",
+          }}
           placeholder="blur"
           blurDataURL={item.thumbnail}
         />

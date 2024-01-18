@@ -122,7 +122,9 @@ export const FeaturePost = () => {
                     src={item.url}
                     alt={item.title}
                     layout="fill"
-                    objectFit="cover"
+                    style={{
+                      objectFit: "cover",
+                    }}
                     loading="lazy"
                   />
                 </Box>

@@ -62,7 +62,9 @@ export const Jump = () => {
             src="/asset/images/jump.png"
             alt="jump"
             layout="fill"
-            objectFit="cover"
+            style={{
+              objectFit: "cover",
+            }}
             loading="lazy"
           />
         </Box>

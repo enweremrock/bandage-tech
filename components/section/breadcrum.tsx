@@ -59,7 +59,7 @@ const NavigationIcon = () => {
       viewBox="0 0 10 16"
       fill="none"
     >
-      <g clip-path="url(#clip0_541_574)">
+      <g clipPath="url(#clip0_541_574)">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"

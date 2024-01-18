@@ -96,7 +96,9 @@ export const Review = () => {
                     src="/asset/images/review.png"
                     alt="review photo"
                     layout="fill"
-                    objectFit="cover"
+                    style={{
+                      objectFit: "cover",
+                    }}
                     loading="lazy"
                   />
                 </Box>

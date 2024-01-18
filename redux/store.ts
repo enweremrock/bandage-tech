@@ -9,8 +9,17 @@ import {
   useSelector as useReduxSelector,
   type TypedUseSelectorHook,
 } from "react-redux";
-
 import { persistReducer } from "redux-persist";
+
+import {
+  FLUSH,
+  PAUSE,
+  PERSIST,
+  PURGE,
+  REGISTER,
+  REHYDRATE,
+} from "redux-persist";
+
 import storage from "redux-persist/lib/storage";
 import { reducer } from "./root-reducer";
 
@@ -25,6 +34,12 @@ const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 export const reduxStore = configureStore({
   reducer: persistedReducer,
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    }),
 });
 export const useDispatch = () => useReduxDispatch<ReduxDispatch>();
 export const useSelector: TypedUseSelectorHook<ReduxState> = useReduxSelector;

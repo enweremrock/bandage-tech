@@ -75,7 +75,9 @@ export const WishlistPopup = ({ anchorEl }: CartPopProps) => {
                         src={item.image}
                         alt="jump"
                         layout="fill"
-                        objectFit="cover"
+                        style={{
+                          objectFit: "cover",
+                        }}
                       />
                     </Box>
                   </Grid>

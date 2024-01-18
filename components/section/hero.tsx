@@ -8,9 +8,6 @@ export const Hero = () => {
     <Box
       sx={{
         width: "100%",
-        // mt: {
-        //   xs: "calc(var(--header-height) - var(--navigation-height))",
-        // },
         height: {
           md: "77.6rem",
         },
