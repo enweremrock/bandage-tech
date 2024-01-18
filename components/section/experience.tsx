@@ -1,6 +1,7 @@
 import { Box, Button, Typography } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import Image from "next/image";
 
 export const Experience = () => {
   const theme = useTheme();
@@ -13,20 +14,35 @@ export const Experience = () => {
           md: "64rem",
           xs: "71.2rem",
         },
-        backgroundImage: {
-          md: "url(/asset/images/experience.webp)",
-          xs: "url(/asset/images/experience-mobile.webp)",
-        },
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
+        // backgroundImage: {
+        //   md: "url(/asset/images/experience.webp)",
+        //   xs: "url(/asset/images/experience-mobile.webp)",
+        // },
+        // backgroundRepeat: "no-repeat",
+        // backgroundSize: "cover",
         width: "100%",
-
+        position: "relative",
         px: {
           md: "19.5rem",
           xs: "2.8rem",
         },
       }}
     >
+      <Image
+        src={
+          isMobile
+            ? "/asset/images/experience-mobile.webp"
+            : "/asset/images/experience.webp"
+        }
+        alt="experience"
+        layout="fill"
+        style={{
+          objectFit: "cover",
+          zIndex: "90",
+          position: "absolute",
+        }}
+        loading="lazy"
+      />
       <Box
         sx={{
           padding: {
@@ -45,6 +61,8 @@ export const Experience = () => {
             flexDirection: "column",
             alignItems: "center",
             gap: "3rem",
+            position: "relative",
+            zIndex: "999",
           }}
         >
           <Typography variant="h6" color="primary.main">

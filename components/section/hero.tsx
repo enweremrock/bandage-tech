@@ -1,5 +1,6 @@
 import { useMedia } from "@/lib/useMediaQuery";
 import { Box } from "@mui/material";
+import Image from "next/image";
 import { ItemInfo, ItemTitle } from "../item-info";
 
 export const Hero = () => {
@@ -49,12 +50,23 @@ export const Hero = () => {
               flexShrink: 0,
               gap: "1.5rem",
               position: "relative",
-              backgroundImage: "url(/asset/images/1.webp)",
-              backgroundRepeat: "no-repeat",
-              objectFit: "cover",
-              backgroundSize: "cover",
             }}
           >
+            <Image
+              src={
+                isMobile
+                  ? "/asset/images/1-mobile.webp"
+                  : "/asset/images/1.webp"
+              }
+              alt="hero-large"
+              layout="fill"
+              style={{
+                objectFit: "cover",
+                zIndex: "90",
+                position: "absolute",
+              }}
+              priority
+            />
             <ItemInfo
               mainTitle={() => (
                 <ItemTitle title="FURNITURE" variant={isMobile ? "h3" : "h2"} />
@@ -75,12 +87,26 @@ export const Hero = () => {
                 flexBasis: "30rem",
                 flexShrink: 0,
                 position: "relative",
-                backgroundImage: "url(/asset/images/2.webp)",
-                backgroundRepeat: "no-repeat",
-                objectFit: "cover",
-                backgroundSize: "cover",
+                // backgroundImage: "url(/asset/images/2.webp)",
+                // backgroundRepeat: "no-repeat",
+                // objectFit: "cover",
+                // backgroundSize: "cover",
               }}
             >
+              <Image
+                src={
+                  isMobile
+                    ? "/asset/images/2-mobile.webp"
+                    : "/asset/images/2.webp"
+                }
+                alt="hero-large"
+                layout="fill"
+                style={{
+                  objectFit: "cover",
+                  zIndex: "90",
+                  position: "absolute",
+                }}
+              />
               <ItemInfo
                 mainTitle={() => <ItemTitle title="FURNITURE" variant="h3" />}
               />
@@ -107,12 +133,22 @@ export const Hero = () => {
                     xs: "30rem",
                   },
                   position: "relative",
-                  backgroundImage: "url(/asset/images/3.webp)",
-                  backgroundRepeat: "no-repeat",
-                  objectFit: "cover",
-                  backgroundSize: "cover",
+                  // backgroundImage: "url(/asset/images/3.webp)",
+                  // backgroundRepeat: "no-repeat",
+                  // objectFit: "cover",
+                  // backgroundSize: "cover",
                 }}
               >
+                <Image
+                  src="/asset/images/3.webp"
+                  alt="hero-large"
+                  layout="fill"
+                  style={{
+                    objectFit: "cover",
+                    zIndex: "90",
+                    position: "absolute",
+                  }}
+                />
                 <ItemInfo
                   mainTitle={() => <ItemTitle title="FURNITURE" variant="h3" />}
                 />
@@ -125,12 +161,22 @@ export const Hero = () => {
                     xs: "30rem",
                   },
                   position: "relative",
-                  backgroundImage: "url(/asset/images/4.webp)",
-                  backgroundRepeat: "no-repeat",
-                  objectFit: "cover",
-                  backgroundSize: "cover",
+                  // backgroundImage: "url(/asset/images/4.webp)",
+                  // backgroundRepeat: "no-repeat",
+                  // objectFit: "cover",
+                  // backgroundSize: "cover",
                 }}
               >
+                <Image
+                  src="/asset/images/4.webp"
+                  alt="hero-large"
+                  layout="fill"
+                  style={{
+                    objectFit: "cover",
+                    zIndex: "90",
+                    position: "absolute",
+                  }}
+                />
                 <ItemInfo
                   mainTitle={() => <ItemTitle title="FURNITURE" variant="h3" />}
                 />

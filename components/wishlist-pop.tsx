@@ -19,7 +19,14 @@ export const WishlistPopup = ({ anchorEl }: CartPopProps) => {
   const dispatch = useDispatch();
 
   return (
-    <Popper id={id} open={open} anchorEl={anchorEl}>
+    <Popper
+      id={id}
+      open={open}
+      anchorEl={anchorEl}
+      sx={{
+        zIndex: "999999",
+      }}
+    >
       <Box
         sx={{
           p: 2,

@@ -20,7 +20,14 @@ export const CartPop = ({ anchorEl }: CartPopProps) => {
   const dispatch = useDispatch();
 
   return (
-    <Popper id={id} open={open} anchorEl={anchorEl}>
+    <Popper
+      id={id}
+      open={open}
+      anchorEl={anchorEl}
+      sx={{
+        zIndex: "999999",
+      }}
+    >
       <Box
         sx={{
           p: 2,
@@ -32,6 +39,7 @@ export const CartPop = ({ anchorEl }: CartPopProps) => {
           border: "1px solid #E8E8E8",
           boxShadow: "0px 2px 4px 0px rgba(0, 0, 0, 0.10)",
           borderRadius: "5px",
+          position: "relative",
         }}
       >
         <Typography mb={2} variant="h4">

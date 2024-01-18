@@ -8,6 +8,8 @@ export const ItemInfo = ({ mainTitle }: ItemInfoProps) => {
   return (
     <Box
       p="2.4rem"
+      zIndex="9999"
+      position="relative"
       sx={{
         width: "100%",
         display: "flex",

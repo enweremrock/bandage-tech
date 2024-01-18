@@ -3,13 +3,26 @@ import { UserIcon } from "@/icons/user";
 import { useMedia } from "@/lib/useMediaQuery";
 import { cartSelector, useSelector, wishlistSelector } from "@/redux";
 import styles from "@/styles/Home.module.css";
+import dynamic from "next/dynamic";
+
 import { Box, Link, Typography } from "@mui/material";
 import NLink from "next/link";
 import { Dispatch, SetStateAction, useState } from "react";
 import { CartButton, SearchCartButton, WishlistButton } from "../cart-button";
-import { CartPop } from "../cart-pop";
 import { Container } from "../container";
-import { WishlistPopup } from "../wishlist-pop";
+
+const WishlistPopup = dynamic(
+  () => import("@/components/wishlist-pop").then((mod) => mod.WishlistPopup),
+  {
+    ssr: false,
+  }
+);
+const CartPop = dynamic(
+  () => import("@/components/cart-pop").then((mod) => mod.CartPop),
+  {
+    ssr: false,
+  }
+);
 
 export const NavHeader = ({
   customStyle,

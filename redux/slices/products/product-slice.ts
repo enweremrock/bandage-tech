@@ -1,12 +1,19 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-import { ProductResponse } from "@/types/product";
-import uniqBy from "lodash/uniqBy";
+import { Product, ProductResponse } from "@/types/product";
 import { fetchAllProductAsync } from "./thunks";
 
 const initialState: ProductSliceState = {
   paginatedProduct: { products: [], skip: 0, limit: 0, total: 1 },
   status: "idle",
+};
+
+const uniqByAarr = (arr1: Product[], arr2: Product[]) => {
+  const mergedSet = new Set(
+    [...arr1, ...arr2].map((item) => JSON.stringify(item))
+  );
+  const mergedArray = Array.from(mergedSet).map((item) => JSON.parse(item));
+  return mergedArray;
 };
 
 export const productSlice = createSlice({
@@ -26,7 +33,10 @@ export const productSlice = createSlice({
           ...action.payload.products,
         ];
 
-        state.paginatedProduct.products = uniqBy(newProducts, "id");
+        state.paginatedProduct.products = uniqByAarr(
+          state.paginatedProduct.products,
+          action.payload.products
+        );
 
         state.paginatedProduct.total = action.payload.total;
       })
